@@ -2,16 +2,24 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt)
+    id("com.google.gms.google-services")
 }
 
 android {
-    namespace = "edu.nd.pmcburne.hwapp.one"
+    namespace = "edu.nd.cnguyen8.hwapp.five"
     compileSdk {
         version = release(36)
     }
 
+    compileSdk {
+        version = release(36)
+    }
+    compileSdkExtension = 19
+
     defaultConfig {
-        applicationId = "edu.nd.pmcburne.hwapp.one"
+        applicationId = "edu.nd.cnguyen8.hwapp.five"
         minSdk = 27
         targetSdk = 36
         versionCode = 1
@@ -50,6 +58,20 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
+
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.hilt.navigation.compose)
+
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore)
+    //implementation("com.google.firebase:firebase-analytics")
+    implementation(platform("com.google.firebase:firebase-bom:34.12.0"))
+
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+
+    implementation(libs.coil.compose)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -57,4 +79,10 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+
+    implementation(libs.androidx.compose.material.icons.extended)
+
+    implementation(libs.androidx.health.connect)
+
+    implementation(libs.firebase.storage)
 }

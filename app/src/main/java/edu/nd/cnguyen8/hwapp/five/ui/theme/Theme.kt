@@ -1,6 +1,5 @@
-package edu.nd.pmcburne.hwapp.one.ui.theme
+package edu.nd.cnguyen8.hwapp.five.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

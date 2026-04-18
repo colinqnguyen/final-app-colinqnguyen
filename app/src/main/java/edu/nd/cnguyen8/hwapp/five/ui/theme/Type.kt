@@ -1,4 +1,4 @@
-package edu.nd.pmcburne.hwapp.one.ui.theme
+package edu.nd.cnguyen8.hwapp.five.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
